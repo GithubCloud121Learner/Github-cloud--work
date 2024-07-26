@@ -1,5 +1,45 @@
-## Commits
+## Git hidden folder 
 
+There is a hidden fodler called `.git` which tells you that our project is a git repo. 
+
+If we wanted to create a git repo in a new project we' create the folder and teh initalize repo using `git init`
+
+```
+mkdir /Github-cloud--work/temp/new-project
+cd /Github-cloud--work/temp/new-project
+git init
+touch Readme.md
+code Readme.md
+git status
+git add readme.md
+# makes changes to readme.md
+git commit -a -m "add readme file"
+```
+
+## Clone
+we can clone three ways: HTTPS, SSH, GITHUB CLI 
+
+since we are using GitHub Codespace we'll create temporary directory in our workspace
+
+
+```sh
+mkdir /work
+cd /workspace/temp
+```
+
+## HTTPS
+
+```sh
+git clone https://github.com/GithubCloud121Learner/Github-cloud--work.git
+cd Github-Example
+
+```
+## Commits
+Whenwe want to commit code we can write git commit which will open up the commit edit message in teh editor of choice. 
+```sh
+git commit 
+```
+we can clone three ways: HTTPS, SSH, GITHUBCLI 
 ## Branches
 
 ## Remotes
@@ -7,3 +47,46 @@
 ## Stashing 
 
 ## Merging 
+
+## Add
+
+When we want to stage change that will be included in the commit.
+We can use the . to add all possible files 
+```
+git add Readme.md
+git add .
+
+```
+## Rest
+
+Reset allows you to move staged changes to be unstaged.
+This is useful when you revert all files not to be not committed 
+
+```
+git add .
+git reset
+```
+
+> git reset will revert a git add. 
+ 
+## Status
+Git status shows you what files will or will not be committed. 
+```
+git status 
+```
+## Gitconfig file 
+
+The gitconfig file is what stores your global configuration for git such as email, name, editer and more. 
+
+Showing the contents of our .gitconfig file
+```
+git config --list 
+```
+
+When you first install git on a machine you are suppose to setup your name and email
+
+```sh
+$ git config --global user.name "John Doe"
+
+$ git config --global user.email johndoe@example.com
+```
